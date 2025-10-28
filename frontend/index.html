@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedTech Image Processor - Intus.AI</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="app">
+        <h1>MedTech Image Processor</h1>
+        <p>Upload a medical image and select processing phase</p>
+        
+        <div class="upload-section">
+            <input type="file" id="imageUpload" accept=".jpg,.jpeg,.png" />
+            <div class="phase-selection">
+                <label>
+                    <input type="radio" name="phase" value="arterial" checked>
+                    Arterial Phase (Increased Contrast)
+                </label>
+                <label>
+                    <input type="radio" name="phase" value="venous">
+                    Venous Phase (Gaussian Smoothing)
+                </label>
+            </div>
+            <button id="processBtn">Process Image</button>
+        </div>
+
+        <div class="results-section">
+            <div class="image-container">
+                <div class="image-box">
+                    <h3>Original Image</h3>
+                    <div id="originalImage" class="image-placeholder">
+                        <p>No image uploaded</p>
+                    </div>
+                </div>
+                <div class="image-box">
+                    <h3>Processed Image</h3>
+                    <div id="processedImage" class="image-placeholder">
+                        <p>Processed image will appear here</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="loading" class="loading hidden">
+            Processing image...
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
